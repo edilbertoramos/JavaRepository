@@ -32,6 +32,10 @@ extension Pull: Mappable {
     
     mutating func mapping(map: Map) {
         
+        // Relations
+        user          <- map["user"]
+
+        // Others
         url           <- map["url"]
         id            <- map["id"]
         node_id       <- map["node_id"]
