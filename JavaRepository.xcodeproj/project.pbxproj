@@ -132,11 +132,10 @@
 			children = (
 				24CC8874215C7A10005E8CBF /* Config */,
 				24CC886E215C7956005E8CBF /* Model */,
-				24CC8841215C7560005E8CBF /* ViewController.swift */,
-				24CC8843215C7560005E8CBF /* Main.storyboard */,
-				24CC8846215C7561005E8CBF /* Assets.xcassets */,
+				24CC8886215C843D005E8CBF /* View */,
+				24CC8888215C847F005E8CBF /* Resources */,
+				24CC8887215C8465005E8CBF /* Controller */,
 				24CC884B215C7561005E8CBF /* Info.plist */,
-				24CC8848215C7561005E8CBF /* LaunchScreen.storyboard */,
 			);
 			path = JavaRepository;
 			sourceTree = "<group>";
@@ -212,6 +211,31 @@
 				24CC8883215C8055005E8CBF /* HttpStatusCode.swift */,
 			);
 			path = "Service Helper";
+			sourceTree = "<group>";
+		};
+		24CC8886215C843D005E8CBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24CC8843215C7560005E8CBF /* Main.storyboard */,
+				24CC8848215C7561005E8CBF /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24CC8887215C8465005E8CBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24CC8841215C7560005E8CBF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24CC8888215C847F005E8CBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24CC8846215C7561005E8CBF /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5DDD02E90810C991B0A81FD0 /* Pods */ = {
