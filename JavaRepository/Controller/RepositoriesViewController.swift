@@ -12,6 +12,8 @@ class RepositoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    fileprivate let segueDetailIdentifier = "RepositoryDetailSegue"
+    
     let repositoryManager = RepositoryManager()
     var repositories = [Repository]()
     
@@ -22,9 +24,22 @@ class RepositoriesViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case segueDetailIdentifier:
+            if let destination = segue.destination as? RepositoryDetailViewController
+                , let indexPath = sender as? IndexPath {
+                destination.repository = repositories[indexPath.row]
+            }
+        default:
+            break
+        }
+    }
+    
     func reloadData() {
         RepositoryManager().repositories(success: { (repositories) in
             self.repositories.append(contentsOf: repositories)
@@ -52,6 +67,8 @@ extension RepositoriesViewController: UITableViewDataSource {
 }
 
 extension RepositoriesViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueDetailIdentifier, sender: indexPath)
+    }
 }
 
