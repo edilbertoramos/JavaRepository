@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        RepositoryManager().repositories(success: { (repositories) in
+            print(repositories.first ?? "not found")
+        }) { (error) in
+        }
     }
 
     override func didReceiveMemoryWarning() {

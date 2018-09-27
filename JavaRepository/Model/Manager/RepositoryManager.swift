@@ -17,7 +17,8 @@ struct RepositoryManager {
         repositoryService.repositories(language: language, sort: sort) { (serviceResponse) in
             
             if serviceResponse.isSuccess {
-                success(serviceResponse.data!.items)
+                let repositories = serviceResponse.data!
+                success(repositories.items)
             } else {
                 failure(serviceResponse.logError())
             }
