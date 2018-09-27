@@ -14,12 +14,11 @@ class RepositoriesViewController: UIViewController {
     
     fileprivate let segueDetailIdentifier = "RepositoryDetailSegue"
     
-    let repositoryManager = RepositoryManager()
     var repositories = [Repository]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reloadData()
+        setupValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +39,8 @@ class RepositoriesViewController: UIViewController {
         }
     }
     
-    func reloadData() {
-        RepositoryManager().repositories(success: { (repositories) in
+    func setupValues() {
+        DataManager.repositories(success: { (repositories) in
             self.repositories.append(contentsOf: repositories)
             self.tableView.reloadData()
         }) { (error) in
