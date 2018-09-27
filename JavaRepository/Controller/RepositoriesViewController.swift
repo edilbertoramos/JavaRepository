@@ -11,7 +11,8 @@ import UIKit
 class RepositoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     fileprivate let segueDetailIdentifier = "RepositoryDetailSegue"
     
     var repositories = [Repository]()
@@ -40,14 +41,21 @@ class RepositoriesViewController: UIViewController {
     }
     
     func setupValues() {
+        activityIndicator.startAnimating()
         DataManager.repositories(success: { (repositories) in
-            self.repositories.append(contentsOf: repositories)
+            self.repositories = repositories
             self.tableView.reloadData()
+            self.tableView.isHidden = self.repositories.count == 0
+            self.activityIndicator.stopAnimating()
         }) { (error) in
-            
+            self.tableView.isHidden = true
+            self.activityIndicator.stopAnimating()
         }
     }
 
+    @IBAction func refresh(_ sender: Any) {
+        setupValues()
+    }
 }
 
 extension RepositoriesViewController: UITableViewDataSource {
@@ -61,6 +69,8 @@ extension RepositoriesViewController: UITableViewDataSource {
         
         cell.textLabel?.text = repositories[indexPath.row].name
         
+        cell.detailTextLabel?.text = repositories[indexPath.row].owner.login
+
         return cell
     }
 }
