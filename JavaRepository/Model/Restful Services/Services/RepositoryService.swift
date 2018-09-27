@@ -14,6 +14,7 @@ struct RepositoryService: RepositoryServiceProtocol {
     
     enum Services: String, ServiceEndpoint {
         case repository = "search/repositories"
+        case pull = "/repos/%@/pulls"
     }
     
     func repositories(language: String, sort: String, callback: @escaping (ServiceResponse<RepositoryResponse>) -> Void) {
@@ -26,5 +27,12 @@ struct RepositoryService: RepositoryServiceProtocol {
 
         ServiceHelper.get(url: uri, parameters: parameters, headers: nil, callbackForObject: callback)
 
+    }
+    
+    func pulls(_ repository: Repository, callback: @escaping (ServiceResponse<[Pull]>) -> Void) {
+        
+        let uri = ServiceHelper.baseUrl + String(format: Services.pull.endpoint, "\(repository.owner.login)/\(repository.name)")
+
+        ServiceHelper.get(url: uri, callbackForObjectArray: callback)
     }
 }
