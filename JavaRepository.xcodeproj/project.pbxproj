@@ -29,6 +29,7 @@
 		24CC8893215C8E40005E8CBF /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC8892215C8E40005E8CBF /* RepositoryService.swift */; };
 		24CC8896215C90FC005E8CBF /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC8895215C90FC005E8CBF /* RepositoryManager.swift */; };
 		24CC8899215C95E5005E8CBF /* RepositoryResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC8898215C95E5005E8CBF /* RepositoryResponseData.swift */; };
+		24CC889F215C9E1A005E8CBF /* ServiceHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC889E215C9E1A005E8CBF /* ServiceHelperTests.swift */; };
 		8266502843A38868C29DBFD2 /* Pods_JavaRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3039CAF03816E03522F94025 /* Pods_JavaRepository.framework */; };
 		E5E235A935070B4A204BE670 /* Pods_JavaRepositoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE6F105ADC8DF338B5A6139 /* Pods_JavaRepositoryUITests.framework */; };
 		FBD05AC6D251B9274E0F0607 /* Pods_JavaRepositoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAB7E69F66AEEE7B02CAAAB /* Pods_JavaRepositoryTests.framework */; };
@@ -82,6 +83,7 @@
 		24CC8892215C8E40005E8CBF /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		24CC8895215C90FC005E8CBF /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
 		24CC8898215C95E5005E8CBF /* RepositoryResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResponseData.swift; sourceTree = "<group>"; };
+		24CC889E215C9E1A005E8CBF /* ServiceHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelperTests.swift; sourceTree = "<group>"; };
 		2AAB7E69F66AEEE7B02CAAAB /* Pods_JavaRepositoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JavaRepositoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3039CAF03816E03522F94025 /* Pods_JavaRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JavaRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		494640B4D2D10BD1B814F765 /* Pods-JavaRepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JavaRepositoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JavaRepositoryTests/Pods-JavaRepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				24CC8854215C7561005E8CBF /* JavaRepositoryTests.swift */,
+				24CC889E215C9E1A005E8CBF /* ServiceHelperTests.swift */,
 				24CC8856215C7561005E8CBF /* Info.plist */,
 			);
 			path = JavaRepositoryTests;
@@ -547,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CC8855215C7561005E8CBF /* JavaRepositoryTests.swift in Sources */,
+				24CC889F215C9E1A005E8CBF /* ServiceHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
