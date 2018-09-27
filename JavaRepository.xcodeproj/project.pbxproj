@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2480EFDD215CAB97000FAAFD /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480EFDC215CAB97000FAAFD /* RepositoryDetailViewController.swift */; };
 		2480EFDF215CB12C000FAAFD /* Pull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480EFDE215CB12C000FAAFD /* Pull.swift */; };
+		2480EFE2215CBF43000FAAFD /* UIViewController+AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480EFE1215CBF43000FAAFD /* UIViewController+AlertError.swift */; };
 		24CC8840215C7560005E8CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC883F215C7560005E8CBF /* AppDelegate.swift */; };
 		24CC8842215C7560005E8CBF /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC8841215C7560005E8CBF /* RepositoriesViewController.swift */; };
 		24CC8845215C7560005E8CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC8843215C7560005E8CBF /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		1CE6F105ADC8DF338B5A6139 /* Pods_JavaRepositoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JavaRepositoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2480EFDC215CAB97000FAAFD /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		2480EFDE215CB12C000FAAFD /* Pull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pull.swift; sourceTree = "<group>"; };
+		2480EFE1215CBF43000FAAFD /* UIViewController+AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertError.swift"; sourceTree = "<group>"; };
 		24CC883C215C7560005E8CBF /* JavaRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CC883F215C7560005E8CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CC8841215C7560005E8CBF /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2480EFE0215CBF23000FAAFD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2480EFE1215CBF43000FAAFD /* UIViewController+AlertError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		24CC8833215C7560005E8CBF = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 			children = (
 				24CC8841215C7560005E8CBF /* RepositoriesViewController.swift */,
 				2480EFDC215CAB97000FAAFD /* RepositoryDetailViewController.swift */,
+				2480EFE0215CBF23000FAAFD /* Utils */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -545,6 +556,7 @@
 				24CC887C215C7C4A005E8CBF /* ServiceEndpoint.swift in Sources */,
 				24CC8840215C7560005E8CBF /* AppDelegate.swift in Sources */,
 				24CC8896215C90FC005E8CBF /* RepositoryManager.swift in Sources */,
+				2480EFE2215CBF43000FAAFD /* UIViewController+AlertError.swift in Sources */,
 				24CC8880215C7FB7005E8CBF /* ServiceError.swift in Sources */,
 				24CC8884215C8055005E8CBF /* HttpStatusCode.swift in Sources */,
 				24CC8873215C79CA005E8CBF /* ServiceHelper.swift in Sources */,

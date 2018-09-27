@@ -50,6 +50,7 @@ class RepositoriesViewController: UIViewController {
         }) { (error) in
             self.tableView.isHidden = true
             self.activityIndicator.stopAnimating()
+            self.showAlertConnectionError(error)
         }
     }
 

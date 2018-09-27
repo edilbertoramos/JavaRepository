@@ -41,6 +41,7 @@ class RepositoryDetailViewController: UIViewController {
         }) { (error) in
             self.tableView.isHidden = true
             self.activityIndicator.stopAnimating()
+            self.showAlertConnectionError(error)
         }
     }
     
