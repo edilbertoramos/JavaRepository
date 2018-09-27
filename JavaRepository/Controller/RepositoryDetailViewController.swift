@@ -32,16 +32,14 @@ class RepositoryDetailViewController: UIViewController {
         title = repository.name
 
         activityIndicator.startAnimating()
-        DataManager.pulls(repository, success: { (pulls) in
+        ServiceManager.pulls(repository, success: { (pulls) in
             self.pulls = pulls
             self.tableView.reloadData()
             self.tableView.isHidden = self.pulls.count == 0
             self.activityIndicator.stopAnimating()
 
         }) { (error) in
-            self.tableView.isHidden = true
             self.activityIndicator.stopAnimating()
-            self.showAlertConnectionError(error)
         }
     }
     

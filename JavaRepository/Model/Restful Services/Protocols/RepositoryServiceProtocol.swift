@@ -11,7 +11,7 @@ import ObjectMapper
 
 protocol RepositoryServiceProtocol {
     
-    func repositories(language: String, sort: String, callback: @escaping (ServiceResponse<RepositoryResponse>) -> Void)
+    func repositories(language: String, sort: String, page: Int, callback: @escaping (ServiceResponse<RepositoryResponse>) -> Void)
     
     func pulls(_ repository: Repository, callback: @escaping (ServiceResponse<[Pull]>) -> Void)
 

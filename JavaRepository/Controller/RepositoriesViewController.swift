@@ -12,13 +12,15 @@ class RepositoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
+    
     fileprivate let segueDetailIdentifier = "RepositoryDetailSegue"
     
+    var manager = RepositoryManager()
     var repositories = [Repository]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupData()
         setupValues()
     }
 
@@ -40,17 +42,21 @@ class RepositoriesViewController: UIViewController {
         }
     }
     
+    func setupData() {
+        repositories.removeAll()
+        manager.incrementPage()
+    }
+    
     func setupValues() {
         activityIndicator.startAnimating()
-        DataManager.repositories(success: { (repositories) in
-            self.repositories = repositories
+
+        ServiceManager.repositories(page: manager.page, success: { (repositories) in
+            self.repositories.append(contentsOf: repositories)
             self.tableView.reloadData()
-            self.tableView.isHidden = self.repositories.count == 0
             self.activityIndicator.stopAnimating()
+            self.manager.incrementPage()
         }) { (error) in
-            self.tableView.isHidden = true
             self.activityIndicator.stopAnimating()
-            self.showAlertConnectionError(error)
         }
     }
 
@@ -61,6 +67,7 @@ class RepositoriesViewController: UIViewController {
 
 extension RepositoriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.tableView.isHidden = repositories.count == 0
         return repositories.count
     }
     
@@ -77,8 +84,17 @@ extension RepositoriesViewController: UITableViewDataSource {
 }
 
 extension RepositoriesViewController: UITableViewDelegate {
+   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueDetailIdentifier, sender: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        // Add data
+        if indexPath.row + 1 == repositories.count {
+            setupValues()
+        }
     }
 }
 

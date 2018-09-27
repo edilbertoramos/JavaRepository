@@ -17,13 +17,14 @@ struct RepositoryService: RepositoryServiceProtocol {
         case pull = "/repos/%@/pulls"
     }
     
-    func repositories(language: String, sort: String, callback: @escaping (ServiceResponse<RepositoryResponse>) -> Void) {
+    func repositories(language: String, sort: String, page: Int, callback: @escaping (ServiceResponse<RepositoryResponse>) -> Void) {
         
         let uri = ServiceHelper.mountUrl(withEndPoint: Services.repository)
         
         var parameters = [String: Any]()
         parameters["q"] = "language:\(language)"
         parameters["sort"] = sort
+        parameters["page"] = page
 
         ServiceHelper.get(url: uri, parameters: parameters, headers: nil, callbackForObject: callback)
 
