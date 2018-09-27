@@ -22,6 +22,7 @@
 		24CC8880215C7FB7005E8CBF /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC887F215C7FB7005E8CBF /* ServiceError.swift */; };
 		24CC8882215C7FC6005E8CBF /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC8881215C7FC6005E8CBF /* CustomError.swift */; };
 		24CC8884215C8055005E8CBF /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC8883215C8055005E8CBF /* HttpStatusCode.swift */; };
+		24CC888B215C8508005E8CBF /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC888A215C8508005E8CBF /* Owner.swift */; };
 		8266502843A38868C29DBFD2 /* Pods_JavaRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3039CAF03816E03522F94025 /* Pods_JavaRepository.framework */; };
 		E5E235A935070B4A204BE670 /* Pods_JavaRepositoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE6F105ADC8DF338B5A6139 /* Pods_JavaRepositoryUITests.framework */; };
 		FBD05AC6D251B9274E0F0607 /* Pods_JavaRepositoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAB7E69F66AEEE7B02CAAAB /* Pods_JavaRepositoryTests.framework */; };
@@ -68,6 +69,7 @@
 		24CC887F215C7FB7005E8CBF /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		24CC8881215C7FC6005E8CBF /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		24CC8883215C8055005E8CBF /* HttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpStatusCode.swift; sourceTree = "<group>"; };
+		24CC888A215C8508005E8CBF /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		2AAB7E69F66AEEE7B02CAAAB /* Pods_JavaRepositoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JavaRepositoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3039CAF03816E03522F94025 /* Pods_JavaRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JavaRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		494640B4D2D10BD1B814F765 /* Pods-JavaRepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JavaRepositoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JavaRepositoryTests/Pods-JavaRepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		24CC886E215C7956005E8CBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24CC8889215C84F7005E8CBF /* Data */,
 				24CC886F215C7968005E8CBF /* Restful Services */,
 			);
 			path = Model;
@@ -236,6 +239,14 @@
 				24CC8846215C7561005E8CBF /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		24CC8889215C84F7005E8CBF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				24CC888A215C8508005E8CBF /* Owner.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5DDD02E90810C991B0A81FD0 /* Pods */ = {
@@ -481,6 +492,7 @@
 				24CC8882215C7FC6005E8CBF /* CustomError.swift in Sources */,
 				24CC887E215C7F87005E8CBF /* ServiceResponse.swift in Sources */,
 				24CC8842215C7560005E8CBF /* ViewController.swift in Sources */,
+				24CC888B215C8508005E8CBF /* Owner.swift in Sources */,
 				24CC887A215C7B3C005E8CBF /* AppConfig.swift in Sources */,
 				24CC887C215C7C4A005E8CBF /* ServiceEndpoint.swift in Sources */,
 				24CC8840215C7560005E8CBF /* AppDelegate.swift in Sources */,
