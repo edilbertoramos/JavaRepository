@@ -5,7 +5,7 @@
 	<key>restful</key>
 	<dict>
 		<key>Prod URL</key>
-		<string>https://api.github.com/</string>
+		<string>https://api.github.com</string>
 	</dict>
 </dict>
 </plist>
