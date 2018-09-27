@@ -16,12 +16,12 @@ struct RepositoryService: RepositoryServiceProtocol {
         case repository = "search/repositories"
     }
     
-    func repositories(q: String = "language:Java", sort: String = "stars", callback: @escaping (ServiceResponse<[Repository]>) -> Void) {
+    func repositories(language: String = "language:Java", sort: String = "stars", callback: @escaping (ServiceResponse<[Repository]>) -> Void) {
         
         let uri = ServiceHelper.mountUrl(withEndPoint: Services.repository)
         
         var parameters = [String: Any]()
-        parameters["q"] = q
+        parameters["q"] = "language:\(language)"
         parameters["sort"] = sort
 
         ServiceHelper.get(url: uri, parameters: parameters, headers: nil, callbackForObjectArray: callback)
