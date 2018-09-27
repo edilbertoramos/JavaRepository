@@ -5,7 +5,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'JavaRepository' do
-        
+    
     # Mapper to and From JSON Objects
     pod  'ObjectMapper', '3.1'
     
