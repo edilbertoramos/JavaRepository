@@ -35,7 +35,8 @@ public struct ServiceResponse<T> {
         self.init(success: true, data: data, error: nil, statusCode: statusCode, errorMessage: nil)
     }
     
-    func logError() {
+    func logError() -> CustomError {
         print("Error: \(error!), message: \(errorMessage ?? "")")
+        return error!
     }
 }
