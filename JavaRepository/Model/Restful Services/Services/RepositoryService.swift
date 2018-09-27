@@ -16,7 +16,7 @@ struct RepositoryService: RepositoryServiceProtocol {
         case repository = "search/repositories"
     }
     
-    func repositories(language: String = "language:Java", sort: String = "stars", callback: @escaping (ServiceResponse<[Repository]>) -> Void) {
+    func repositories(language: String, sort: String, callback: @escaping (ServiceResponse<RepositoryResponse>) -> Void) {
         
         let uri = ServiceHelper.mountUrl(withEndPoint: Services.repository)
         
@@ -24,7 +24,7 @@ struct RepositoryService: RepositoryServiceProtocol {
         parameters["q"] = "language:\(language)"
         parameters["sort"] = sort
 
-        ServiceHelper.get(url: uri, parameters: parameters, headers: nil, callbackForObjectArray: callback)
+        ServiceHelper.get(url: uri, parameters: parameters, headers: nil, callbackForObject: callback)
 
     }
 }
